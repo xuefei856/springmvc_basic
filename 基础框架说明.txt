@@ -1,0 +1,21 @@
+1.本框架应用技术：
+    springmvc
+    mybatis
+    shiro
+    maven
+    log4j
+
+2.本框架将实现功能：
+    传统的CRUD
+    基于注解的事务
+    国际化
+    上传下载
+    日志
+    报错跳转页面
+    简单权限管理（最基础的菜单管理）
+
+
+
+springmvc,mybatis,shiro,maven
+支持国际化，上传下载，日志
+mybatis缓存，shiro缓存,数据验证，事务，报错后跳转页面
