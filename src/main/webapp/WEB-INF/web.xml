@@ -18,7 +18,6 @@
     <!-- Spring -->
 
 
-
     <!-- 配置Spring字符编码过滤器 -->
     <filter>
         <filter-name>encodingFilter</filter-name>
@@ -68,5 +67,14 @@
     </servlet-mapping>
 
 
+    <!--上线之后放开注释，开发期间无法看到错误信息-->
+    <!--<error-page>-->
+        <!--<error-code>404</error-code>-->
+        <!--<location>/WEB-INF/pages/errorPage/404.jsp</location>-->
+    <!--</error-page>-->
 
+    <!--<error-page>-->
+        <!--<error-code>500</error-code>-->
+        <!--<location>/WEB-INF/pages/errorPage/500.jsp</location>-->
+    <!--</error-page>-->
 </web-app>

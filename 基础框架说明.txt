@@ -1,12 +1,16 @@
 1.本框架应用技术：
+    jsp/freemarker
     springmvc
     mybatis
     shiro
     maven
-    log4j
+    logback
+    redis
+    mysql
 
 2.本框架将实现功能：
     传统的CRUD
+    分页
     基于注解的事务
     国际化
     上传下载
@@ -17,5 +21,5 @@
 
 
 springmvc,mybatis,shiro,maven
-支持国际化，上传下载，日志
+支持国际化，上传下载
 mybatis缓存，shiro缓存,数据验证，事务，报错后跳转页面
