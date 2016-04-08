@@ -55,7 +55,8 @@
     <tx:annotation-driven transaction-manager="txManager"/>
 
 
-    <import resource="classpath:resources/mybatis/spring-mybatis.xml"/>
+    <!--分页插件配置-->
+    <!--<import resource="classpath:resources/mybatis/spring-mybatis.xml"/>-->
 
 
 </beans>

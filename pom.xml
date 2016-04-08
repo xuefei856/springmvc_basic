@@ -249,6 +249,7 @@
             <version>${jstl.version}</version>
         </dependency>
 
+
         <!-- start apache -->
         <dependency>
             <groupId>commons-fileupload</groupId>
@@ -361,6 +362,13 @@
             <version>1.3.2</version>
             <type>jar</type>
             <scope>test</scope>
+        </dependency>
+
+        <!--lombock 编译时生成set get toString hashCode方法的插件-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.8</version>
         </dependency>
 
         <!--mybatis分页插件PageHelper-->

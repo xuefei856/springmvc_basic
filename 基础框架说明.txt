@@ -10,6 +10,7 @@
     mysql
     dubbo
     zokeeper
+    lombock
 
 
 2.本框架将实现功能：

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.IDao.PathManagementMapper" >
+  <resultMap id="BaseResultMap" type="com.entity.PathManagement" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="controller" property="controller" jdbcType="VARCHAR" />
+    <result column="action" property="action" jdbcType="VARCHAR" />
+    <result column="comment" property="comment" jdbcType="VARCHAR" />
+    <result column="type" property="type" jdbcType="BIT" />
+    <result column="is_admin" property="isAdmin" jdbcType="BIT" />
+    <result column="parent_id" property="parentId" jdbcType="BIGINT" />
+    <result column="all_path" property="allPath" jdbcType="VARCHAR" />
+    <result column="host_id" property="hostId" jdbcType="BIGINT" />
+    <result column="update_count" property="updateCount" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="modify_time" property="modifyTime" jdbcType="TIMESTAMP" />
+    <result column="deleted" property="deleted" jdbcType="INTEGER" />
+    <result column="source" property="source" jdbcType="BIGINT" />
+    <result column="title" property="title" jdbcType="VARCHAR" />
+    <result column="description" property="description" jdbcType="VARCHAR" />
+    <result column="keywords" property="keywords" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, controller, action, comment, type, is_admin, parent_id, all_path, host_id, update_count, 
+    create_time, modify_time, deleted, source, title, description, keywords
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from gt_path_management
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from gt_path_management
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.entity.PathManagement" >
+    insert into gt_path_management (id, controller, action, 
+      comment, type, is_admin, parent_id, 
+      all_path, host_id, update_count, 
+      create_time, modify_time, deleted, 
+      source, title, description, 
+      keywords)
+    values (#{id,jdbcType=BIGINT}, #{controller,jdbcType=VARCHAR}, #{action,jdbcType=VARCHAR}, 
+      #{comment,jdbcType=VARCHAR}, #{type,jdbcType=BIT}, #{isAdmin,jdbcType=BIT}, #{parentId,jdbcType=BIGINT}, 
+      #{allPath,jdbcType=VARCHAR}, #{hostId,jdbcType=BIGINT}, #{updateCount,jdbcType=INTEGER}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{modifyTime,jdbcType=TIMESTAMP}, #{deleted,jdbcType=INTEGER}, 
+      #{source,jdbcType=BIGINT}, #{title,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR}, 
+      #{keywords,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.entity.PathManagement" >
+    insert into gt_path_management
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="controller != null" >
+        controller,
+      </if>
+      <if test="action != null" >
+        action,
+      </if>
+      <if test="comment != null" >
+        comment,
+      </if>
+      <if test="type != null" >
+        type,
+      </if>
+      <if test="isAdmin != null" >
+        is_admin,
+      </if>
+      <if test="parentId != null" >
+        parent_id,
+      </if>
+      <if test="allPath != null" >
+        all_path,
+      </if>
+      <if test="hostId != null" >
+        host_id,
+      </if>
+      <if test="updateCount != null" >
+        update_count,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="modifyTime != null" >
+        modify_time,
+      </if>
+      <if test="deleted != null" >
+        deleted,
+      </if>
+      <if test="source != null" >
+        source,
+      </if>
+      <if test="title != null" >
+        title,
+      </if>
+      <if test="description != null" >
+        description,
+      </if>
+      <if test="keywords != null" >
+        keywords,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="controller != null" >
+        #{controller,jdbcType=VARCHAR},
+      </if>
+      <if test="action != null" >
+        #{action,jdbcType=VARCHAR},
+      </if>
+      <if test="comment != null" >
+        #{comment,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=BIT},
+      </if>
+      <if test="isAdmin != null" >
+        #{isAdmin,jdbcType=BIT},
+      </if>
+      <if test="parentId != null" >
+        #{parentId,jdbcType=BIGINT},
+      </if>
+      <if test="allPath != null" >
+        #{allPath,jdbcType=VARCHAR},
+      </if>
+      <if test="hostId != null" >
+        #{hostId,jdbcType=BIGINT},
+      </if>
+      <if test="updateCount != null" >
+        #{updateCount,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifyTime != null" >
+        #{modifyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deleted != null" >
+        #{deleted,jdbcType=INTEGER},
+      </if>
+      <if test="source != null" >
+        #{source,jdbcType=BIGINT},
+      </if>
+      <if test="title != null" >
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null" >
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="keywords != null" >
+        #{keywords,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.entity.PathManagement" >
+    update gt_path_management
+    <set >
+      <if test="controller != null" >
+        controller = #{controller,jdbcType=VARCHAR},
+      </if>
+      <if test="action != null" >
+        action = #{action,jdbcType=VARCHAR},
+      </if>
+      <if test="comment != null" >
+        comment = #{comment,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        type = #{type,jdbcType=BIT},
+      </if>
+      <if test="isAdmin != null" >
+        is_admin = #{isAdmin,jdbcType=BIT},
+      </if>
+      <if test="parentId != null" >
+        parent_id = #{parentId,jdbcType=BIGINT},
+      </if>
+      <if test="allPath != null" >
+        all_path = #{allPath,jdbcType=VARCHAR},
+      </if>
+      <if test="hostId != null" >
+        host_id = #{hostId,jdbcType=BIGINT},
+      </if>
+      <if test="updateCount != null" >
+        update_count = #{updateCount,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifyTime != null" >
+        modify_time = #{modifyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deleted != null" >
+        deleted = #{deleted,jdbcType=INTEGER},
+      </if>
+      <if test="source != null" >
+        source = #{source,jdbcType=BIGINT},
+      </if>
+      <if test="title != null" >
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null" >
+        description = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="keywords != null" >
+        keywords = #{keywords,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.entity.PathManagement" >
+    update gt_path_management
+    set controller = #{controller,jdbcType=VARCHAR},
+      action = #{action,jdbcType=VARCHAR},
+      comment = #{comment,jdbcType=VARCHAR},
+      type = #{type,jdbcType=BIT},
+      is_admin = #{isAdmin,jdbcType=BIT},
+      parent_id = #{parentId,jdbcType=BIGINT},
+      all_path = #{allPath,jdbcType=VARCHAR},
+      host_id = #{hostId,jdbcType=BIGINT},
+      update_count = #{updateCount,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      modify_time = #{modifyTime,jdbcType=TIMESTAMP},
+      deleted = #{deleted,jdbcType=INTEGER},
+      source = #{source,jdbcType=BIGINT},
+      title = #{title,jdbcType=VARCHAR},
+      description = #{description,jdbcType=VARCHAR},
+      keywords = #{keywords,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>
