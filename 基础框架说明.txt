@@ -1,7 +1,9 @@
 1.本框架应用技术：
     jsp/freemarker
     springmvc
-    mybatis
+    mybatis(xml形式与通过实体反射生成基础sql两种形式)
+
+
     shiro
     maven
     logback
@@ -13,6 +15,7 @@
     lombock
 
 
+
 2.本框架将实现功能：
     传统的CRUD
     分页
@@ -20,7 +23,7 @@
     国际化
     上传下载
     日志
-    报错跳转页面
+    报错跳转页面(并显示错误信息)
     简单权限管理（最基础的菜单管理）
     分布式技术
     分布式配置管理
