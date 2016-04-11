@@ -66,7 +66,7 @@
                 <directory>src/main/java</directory>
                 <includes>
                     <include>**/*.properties</include>
-                    <include>**/*.xml</include>
+                    <include>**/*.xml</include>     <!--不拦截mapper文件，如不配置，编译后则没有mapper文件夹-->
                 </includes>
                 <filtering>true</filtering>
             </resource>
@@ -80,7 +80,7 @@
         <project.build.jdk>1.8</project.build.jdk>
 
         <!-- plugin setting -->
-        <mybatis.generator.generatorConfig.xml>${basedir}/src/main/resources/generatorConfig.xml
+        <mybatis.generator.generatorConfig.xml>${basedir}/src/main/resources/generator/generatorConfig.xml
         </mybatis.generator.generatorConfig.xml>
         <mybatis.generator.generatorConfig.properties>file:///${basedir}/src/test/resources/generatorConfig.properties
         </mybatis.generator.generatorConfig.properties>
