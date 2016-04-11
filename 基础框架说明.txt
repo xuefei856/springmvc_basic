@@ -2,8 +2,6 @@
     jsp/freemarker
     springmvc
     mybatis(xml形式与通过实体反射生成基础sql两种形式)
-
-
     shiro
     maven
     logback

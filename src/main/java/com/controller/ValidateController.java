@@ -15,16 +15,11 @@ import javax.validation.Valid;
 @Controller
 @RequestMapping("/validateController")
 public class ValidateController {
-    @RequestMapping(method = RequestMethod.GET)
-    public String printWelcome(ModelMap model) {
-        model.addAttribute("message", "Hello world!");
-        return "hello";
-    }
-
 
     /**
      * validateTest 数据验证测试页面
      * 当 validateTestClass 中的name有值时会通过数据验证，否则不会通过验证
+     * 这里只用一个验证注解做为示例，更多请baidu hibernate Validate注解
      * @param model
      * @param validateTestClass
      * @param result
