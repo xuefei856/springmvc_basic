@@ -25,26 +25,26 @@
             <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
         <!-- 生成模型的包名和位置-->
-        <javaModelGenerator targetPackage="com.entity" targetProject="src">
+        <javaModelGenerator targetPackage="com.gt.business.repository.entity" targetProject="src">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
         <!-- 生成映射文件的包名和位置-->
-        <sqlMapGenerator targetPackage="com.mapper" targetProject="src">
+        <sqlMapGenerator targetPackage="com.gt.business.repository.map" targetProject="src">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
         <!-- 生成DAO的包名和位置-->
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.IDao" targetProject="src">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.gt.business.repository.dao" targetProject="src">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
         <!-- 要生成的表 tableName是数据库中的表名或视图名 domainObjectName是实体类名-->
-        <table tableName="country"
-               domainObjectName="Country"
-               enableCountByExample="false"
-               enableUpdateByExample="false"
-               enableDeleteByExample="false"
-               enableSelectByExample="false"
-               selectByExampleQueryId="false"></table>
-        <!--<table tableName="country" domainObjectName="Country"/>-->
+        <table tableName="gt_settlement_bills"
+               domainObjectName="SettlementBills"
+               enableCountByExample="true"
+               enableUpdateByExample="true"
+               enableDeleteByExample="true"
+               enableSelectByExample="true"
+               selectByExampleQueryId="true"></table>
+
     </context>
 </generatorConfiguration>

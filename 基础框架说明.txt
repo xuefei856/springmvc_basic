@@ -11,6 +11,7 @@
     dubbo
     zokeeper
     lombock
+    solr6.0
 
 
 
