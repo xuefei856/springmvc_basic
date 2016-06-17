@@ -75,4 +75,6 @@
     </bean>
 
 
+    <!--shiro配置-->
+    <import resource="classpath*:shiro/shiro.xml"/>
 </beans>

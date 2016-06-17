@@ -59,6 +59,7 @@
                 <includes>
                     <include>**/*.properties</include>
                     <include>**/*.xml</include>
+                    <include>**/*.ini</include>
                 </includes>
                 <filtering>true</filtering>
             </resource>
@@ -67,6 +68,7 @@
                 <includes>
                     <include>**/*.properties</include>
                     <include>**/*.xml</include>     <!--不拦截mapper文件，如不配置，编译后则没有mapper文件夹-->
+                    <include>**/*.ini</include>     <!--不拦截ini文件-->
                 </includes>
                 <filtering>true</filtering>
             </resource>
@@ -399,6 +401,27 @@
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
             <version>4.5.2</version>
+        </dependency>
+
+
+
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>1.9.2</version>
+        </dependency>
+
+
+        <dependency>
+        <groupId>org.apache.poi</groupId>
+        <artifactId>poi</artifactId>
+        <version>3.14</version>
+    </dependency>
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>2.6</version>
+            <scope>test</scope>
         </dependency>
 
 
