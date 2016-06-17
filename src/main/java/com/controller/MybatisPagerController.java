@@ -1,9 +1,9 @@
 package com.controller;
 
-import com.entity.Country;
+import com.entity.SettlementBills;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.service.CountryService;
+import com.service.SettlementBillsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -25,18 +25,18 @@ public class MybatisPagerController {
 
 
     @Autowired
-    private CountryService countryService;
+    private SettlementBillsService settlementBillsService;
 
     @RequestMapping(value = "mybatisPagerTest", method = RequestMethod.GET)
     public String mybatisPagerTest(ModelMap model) {
 
-        PageHelper.startPage(1, 10, "id asc");  //分页
-        List<Country> pathManagementList = countryService.selectByPage();
+        PageHelper.startPage(1, 3, "id asc");  //分页
+        List<SettlementBills> settlementBillsList = settlementBillsService.selectByPage();
 
-        PageInfo page = new PageInfo(pathManagementList);   //强转为PageInfo类型，包含了大量分页信息，总条数等
+        PageInfo page = new PageInfo(settlementBillsList);   //强转为PageInfo类型，包含了大量分页信息，总条数等
 
 
-        model.addAttribute("page", page);
+//        model.addAttribute("page", page);
         return "mybatisTest/list";
     }
 

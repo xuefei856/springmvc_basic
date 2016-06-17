@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.SettlementBillsMapper">
+  <resultMap id="BaseResultMap" type="com.entity.SettlementBills">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="settlement_bills_name" jdbcType="VARCHAR" property="settlementBillsName" />
+    <result column="section_id" jdbcType="BIGINT" property="sectionId" />
+    <result column="section_name" jdbcType="VARCHAR" property="sectionName" />
+    <result column="dispatch_bill_ids" jdbcType="VARCHAR" property="dispatchBillIds" />
+    <result column="guarantee" jdbcType="DOUBLE" property="guarantee" />
+    <result column="amount_in_advance" jdbcType="DOUBLE" property="amountInAdvance" />
+    <result column="contract_no" jdbcType="VARCHAR" property="contractNo" />
+    <result column="supplier" jdbcType="VARCHAR" property="supplier" />
+    <result column="material_type" jdbcType="INTEGER" property="materialType" />
+    <result column="approval_status" jdbcType="INTEGER" property="approvalStatus" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="is_generate_service_charge" jdbcType="INTEGER" property="isGenerateServiceCharge" />
+    <result column="creater_id" jdbcType="BIGINT" property="createrId" />
+    <result column="create_name" jdbcType="VARCHAR" property="createName" />
+    <result column="total_transport_fees" jdbcType="DOUBLE" property="totalTransportFees" />
+    <result column="apply_payment_fees" jdbcType="DOUBLE" property="applyPaymentFees" />
+    <result column="total_goods_money" jdbcType="DOUBLE" property="totalGoodsMoney" />
+    <result column="update_count" jdbcType="INTEGER" property="updateCount" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="modify_time" jdbcType="TIMESTAMP" property="modifyTime" />
+    <result column="finish_time" jdbcType="TIMESTAMP" property="finishTime" />
+    <result column="deleted" jdbcType="INTEGER" property="deleted" />
+    <result column="source" jdbcType="BIGINT" property="source" />
+    <result column="business_state" jdbcType="INTEGER" property="businessState" />
+    <result column="business_workflow_type" jdbcType="VARCHAR" property="businessWorkflowType" />
+    <result column="business_object_type" jdbcType="VARCHAR" property="businessObjectType" />
+    <result column="business_id" jdbcType="BIGINT" property="businessId" />
+    <result column="project_manager_id" jdbcType="BIGINT" property="projectManagerId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, settlement_bills_name, section_id, section_name, dispatch_bill_ids, guarantee,
+    amount_in_advance, contract_no, supplier, material_type, approval_status, remark,
+    is_generate_service_charge, creater_id, create_name, total_transport_fees, apply_payment_fees,
+    total_goods_money, update_count, create_time, modify_time, finish_time, deleted,
+    source, business_state, business_workflow_type, business_object_type, business_id,
+    project_manager_id
+  </sql>
+  <select id="selectByPage" resultMap="BaseResultMap">
+    select * from gt_settlement_bills
+  </select>
+</mapper>
